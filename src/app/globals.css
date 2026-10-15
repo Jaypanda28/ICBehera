@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #12304A;
+    --primary-hover: #0c2336;
+    --primary-light: #1e4566;
+    --secondary: #0F9D92;
+    --secondary-hover: #0c7f76;
+    --secondary-light: #e6f6f5;
+    --background: #FFFFFF;
+    --alt-bg: #F3F8FC;
+    --card-bg: #FFFFFF;
+    --main-text: #263238;
+    --muted-text: #64748B;
+    --border-color: #E2E8F0;
+    --border-focus: #0F9D92;
+    --accent-red: #DC2626;
+    --accent-green: #16A34A;
+    --accent-amber: #D97706;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--main-text);
+    font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Healthcare UI Utilities */
+.bg-navy-primary {
+  background-color: #12304A;
+}
+.text-navy-primary {
+  color: #12304A;
+}
+.border-navy-primary {
+  border-color: #12304A;
+}
+
+.bg-teal-medical {
+  background-color: #0F9D92;
+}
+.text-teal-medical {
+  color: #0F9D92;
+}
+.border-teal-medical {
+  border-color: #0F9D92;
+}
+
+.bg-alt-blue {
+  background-color: #F3F8FC;
+}
+
+.text-dark-charcoal {
+  color: #263238;
+}
+
+.text-muted-grey {
+  color: #64748B;
+}
+
+/* Glassmorphism & Medical Card Treatments */
+.medical-card {
+  background: #ffffff;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 20px -2px rgba(18, 48, 74, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.medical-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -4px rgba(18, 48, 74, 0.12);
+  border-color: #0F9D92;
+}
+
+/* Subtle pulse for emergency/status indicators */
+@keyframes subtle-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-subtle-pulse {
+  animation: subtle-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
